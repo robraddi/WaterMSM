@@ -1,0 +1,202 @@
+% The Preamble {{{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a (brief) model paper using the achemso class
+%% The document class accepts keyval options, which should include
+%% the target journal and optionally the manuscript type. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal=jacsat,manuscript=article]{achemso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional packages needed here.  Only include packages
+%% which are essential, to avoid problems later. Do NOT use any
+%% packages which require e-TeX (for example etoolbox): the e-TeX
+%% extensions are not currently available on the ACS conversion
+%% servers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage[a4paper]{geometry}
+\usepackage{minted}      % code syntax highlighting
+\usepackage{soul}        % strike through by \st{text here....}
+\usepackage[hybrid]{markdown}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{back}{rgb}{0.95,0.95,0.92}
+\definecolor{red}{rgb}{255,0,0}
+\definecolor{teal}{rgb}{0,255,255}
+
+%\renewcommand{\lstlistingname}{Chart}
+%Code listing style named "mystyle"
+%\lstdefinestyle{mystyle}{
+%  xleftmargin=4em,
+%  xrightmargin=4em,
+%  backgroundcolor=\color{white},
+%  commentstyle=\color{teal},
+%  keywordstyle=\color{red},
+%  numberstyle=\tiny\color{blank},
+%  stringstyle=\color{red},
+%  basicstyle=\footnotesize,
+%  breakatwhitespace=false,         
+%  breaklines=true, 
+%  captionpos=t,                    
+%  keepspaces=true,                 
+%  numbers=left,
+%  numbersep=5pt,                  
+%  showspaces=false,                
+%  showstringspaces=false,
+%  showtabs=false,                  
+%  tabsize=2
+%}
+
+%"mystyle" code listing set
+%\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If issues arise when submitting your manuscript, you may want to
+%% un-comment the next line.  This provides information on the
+%% version of every file you have used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\listfiles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Place any additional macros here.  Please use \newcommand* where
+%% possible, and avoid layout-changing macros (which are not used
+%% when typesetting).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\mycommand[1]{\texttt{\emph{#1}}}
+
+%%% Need this for "Figure S1" labeling, etc.
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Meta-data block
+%% ---------------
+%% Each author should be given as a separate \author command.
+%%
+%% Corresponding authors should have an e-mail given after the author
+%% name as an \email command. Phone and fax numbers can be given
+%% using \phone and \fax, respectively; this information is optional.
+%%
+%% The affiliation of authors is given after the authors; each
+%% \affiliation command applies to all preceding authors not already
+%% assigned an affiliation.
+%%
+%% The affiliation takes an option argument for the short name.  This
+%% will typically be something like "University of Somewhere".
+%%
+%% The \altaffiliation macro should be used for new address, etc.
+%% On the other hand, \alsoaffiliation is used on a per author basis
+%% when authors are associated with multiple institutions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor=blue         
+}
+
+
+%%% HELPER CODE FOR DEALING WITH EXTERNAL REFERENCES
+\usepackage{xr-hyper}
+\makeatletter
+\newcommand*{\addFileDependency}[1]{
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+
+%%%%%%%% Title %%%%%%%%
+\title{A Markov State Model of Solvent Features Reveals Water Dynamics in Protein-Protein Binding}
+\author{Robert M. Raddi}
+\author{Vincent A. Voelz}
+\affiliation[Temple University]
+{Department of Chemistry, Temple University, Philadelphia, PA 19122, USA}
+\email{voelz@temple.edu}
+%\date{Date}
+
+% }}}
+
+\begin{document}
+\input{abstract.tex}
+\input{introduction.tex}
+\input{methods.tex}
+\input{results.tex}
+\input{discussion.tex}
+\input{conclusion.tex}
+\bibliographystyle{plain}
+\bibliography{references}
+\input{SI.tex}
+\end{document}
+
+
+
+
+% Overleaf Notes: {{{
+%\section{Introduction}
+%\subsection{Bayesian framework for inference}
+
+%\color{red}
+%\begin{itemize}
+%    \item RR: 
+%    \item 
+%\end{itemize}
+%\color{black}
+
+
+%\begin{equation}
+%P(X|D) \propto Q(D|X) P(X)
+%\label{eq:bayes}
+%\end{equation}
+
+%\paragraph{Reference potentials.}
+%The correct implementation of reference potentials is an important advantage of the BICePs algorithm. The experimental data used to construct the %likelihood function comes from some set of ensemble-averaged experimental observables $\mathbf{r} = (r_1, r_2, ..., r_N)$. Such observables are %low-dimensional projections of some high-dimensional state space $X$, and therefore these restraints in the space of observables need to be treated as %\textit{potentials of mean force}.\cite{Olsson:2013gq,Olsson:2011kl,Hamelryck:2010dea}
+
+%\subsection{Restraint}
+%The \verb|Restraint| class initializes all necessary functions to construct numpy array containing information for BICePs sampling. As a parent class, %it also includes child classes for different experimental restraints. Upon initialization, the algorithm will collect all input raw data and %corresponding experimental values for each experimental observable in each state. Meanwhile, $\chi^2$ values and reference potentials (see Theory) for %each restraint are computed at this step. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{equation}
+%P(X | D) \propto\left[\frac{Q(\mathbf{r}(X) | D)}{Q_{\text { ref }}(\mathbf{r}(X))}\right] P(X)
+%\label{eq:ref}
+%\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.5]{ref_potentials.pdf}
+%\caption{A highly informative distance restraint has an experimental likelihood that differs significantly from its reference distribution.}
+%\label{fig:ref_potentials}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{minted}
+%[frame=lines,
+%framesep=2mm,
+%baselinestretch=1.2,
+%fontsize=\small,%\footnotesize,
+%linenos,
+%xleftmargin=4em,
+%xrightmargin=4em,]{python}
+%from biceps import Preparation
+%p = Preparation(scheme='noe', states=100, data_dir='NOE/*txt',
+%    indices='atom_indice_noe.txt', exp_data='noe_distance.txt',
+%    top='cineromycinB_pdbs/0.fixed.pdb')   
+%p.write(out_dir='noe_J')
+%\end{minted}
+
+% }}}

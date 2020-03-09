@@ -1,0 +1,130 @@
+%% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
+
+%% Created for Robert M. Raddi at 2017-02-28 19:47:32 -0500 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+
+
+
+@book{bowman2013introduction,
+	Author = {Bowman, Gregory R and Pande, Vijay S and No{\'e}, Frank},
+	Date-Added = {2017-02-28 22:59:41 +0000},
+	Date-Modified = {2017-02-28 22:59:41 +0000},
+	Publisher = {Springer Science \&amp; Business Media},
+	Title = {An introduction to Markov state models and their application to long timescale molecular simulation},
+	Volume = {797},
+	Year = {2013}}
+
+@article{Hunter:2007,
+	Abstract = {Matplotlib is a 2D graphics package used for Python
+  for application development, interactive scripting, and
+  publication-quality image generation across user
+  interfaces and operating systems.},
+	Author = {Hunter, J. D.},
+	Date-Added = {2017-02-10 19:02:15 +0000},
+	Date-Modified = {2017-02-10 19:02:15 +0000},
+	Doi = {10.1109/MCSE.2007.55},
+	Journal = {Computing In Science \& Engineering},
+	Number = {3},
+	Pages = {90--95},
+	Publisher = {IEEE COMPUTER SOC},
+	Title = {Matplotlib: A 2D graphics environment},
+	Volume = {9},
+	Year = 2007,
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/MCSE.2007.55}}
+
+@article{harrigan2017msmbuilder,
+	Author = {Harrigan, Matthew P and Sultan, Mohammad M and Hern{\'a}ndez, Carlos X and Husic, Brooke E and Eastman, Peter and Schwantes, Christian R and Beauchamp, Kyle A and McGibbon, Robert T and Pande, Vijay S},
+	Date-Added = {2017-02-08 00:42:57 +0000},
+	Date-Modified = {2017-02-08 00:42:57 +0000},
+	Journal = {Biophysical Journal},
+	Number = {1},
+	Pages = {10--15},
+	Publisher = {Elsevier},
+	Title = {MSMBuilder: Statistical Models for Biomolecular Dynamics},
+	Volume = {112},
+	Year = {2017}}
+
+@article{mcgibbon2015mdtraj,
+	Author = {McGibbon, Robert T and Beauchamp, Kyle A and Harrigan, Matthew P and Klein, Christoph and Swails, Jason M and Hern{\'a}ndez, Carlos X and Schwantes, Christian R and Wang, Lee-Ping and Lane, Thomas J and Pande, Vijay S},
+	Date-Added = {2017-02-08 00:42:37 +0000},
+	Date-Modified = {2017-02-08 00:42:37 +0000},
+	Journal = {Biophysical journal},
+	Number = {8},
+	Pages = {1528--1532},
+	Publisher = {Elsevier},
+	Title = {MDTraj: A modern open library for the analysis of molecular dynamics trajectories},
+	Volume = {109},
+	Year = {2015}}
+
+@article{fenley2012entropy,
+	Author = {Fenley, Andrew T and Muddana, Hari S and Gilson, Michael K},
+	Date-Added = {2017-02-08 00:42:16 +0000},
+	Date-Modified = {2017-02-08 00:42:16 +0000},
+	Journal = {Proceedings of the National Academy of Sciences},
+	Number = {49},
+	Pages = {20006--20011},
+	Publisher = {National Acad Sciences},
+	Title = {Entropy--enthalpy transduction caused by conformational shifts can obscure the forces driving protein--ligand binding},
+	Volume = {109},
+	Year = {2012}}
+
+@article{huang2015role,
+	Author = {Huang, WenJuan and Blinov, Nikolay and Wishart, David S and Kovalenko, Andriy},
+	Date-Added = {2017-02-08 00:41:49 +0000},
+	Date-Modified = {2017-02-08 00:41:49 +0000},
+	Journal = {Journal of chemical information and modeling},
+	Number = {2},
+	Pages = {317--328},
+	Publisher = {ACS Publications},
+	Title = {Role of water in ligand binding to maltose-binding protein: insight from a new docking protocol based on the 3D-RISM-KH molecular theory of solvation},
+	Volume = {55},
+	Year = {2015}}
+
+@article{bellissent2016water,
+	Author = {Bellissent-Funel, Marie-Claire and Hassanali, Ali and Havenith, Martina and Henchman, Richard and Pohl, Peter and Sterpone, Fabio and van der Spoel, David and Xu, Yao and Garcia, Angel E},
+	Date-Added = {2017-02-08 00:41:15 +0000},
+	Date-Modified = {2017-02-08 00:41:15 +0000},
+	Journal = {Chemical reviews},
+	Number = {13},
+	Pages = {7673--7697},
+	Publisher = {ACS Publications},
+	Title = {Water determines the structure and dynamics of proteins},
+	Volume = {116},
+	Year = {2016}}
+
+@article{cui2014free,
+	Author = {Cui, Di and Ou, Shuching and Patel, Sandeep},
+	Date-Added = {2017-02-08 00:40:41 +0000},
+	Date-Modified = {2017-02-08 00:40:41 +0000},
+	Journal = {Proteins: Structure, Function, and Bioinformatics},
+	Number = {7},
+	Pages = {1453--1468},
+	Publisher = {Wiley Online Library},
+	Title = {Free energetics of rigid body association of ubiquitin binding domains: A biochemical model for binding mediated by hydrophobic interaction},
+	Volume = {82},
+	Year = {2014}}
+
+@article{harrigan2015conserve,
+	Annote = {Molecular dynamics with explicit solvent  using MSMs and "solvent-shells featurization" for including solvent degrees of freedom.
+Solvent shells featurization--->
+The features are the solvent shells, where `important' water molecules can be found by locating the water molecules that have been binned in a solvent shell of two or more atoms simultaneously.  These are binned based on the radial distances from each solute atom. 
+
+Solvent shell featurizer script can be found under ``wetmsm'' on Mathew Harrigans's github page:  https://github.com/mpharrigan/wetmsm
+
+partial_transform(self, traj) will featurize a trajectory using the solvent shells. 
+
+Using tICA, we can ``find a set of linear combinations of input features which define ``components'' to serve as a new basis set for the data.''  
+Projecting the input features on the top n slowest tICs ---> dimensionality reduction.},
+	Author = {Harrigan, Matthew P and Shukla, Diwakar and Pande, Vijay S},
+	Date-Added = {2017-02-08 00:39:52 +0000},
+	Date-Modified = {2017-02-13 17:17:08 +0000},
+	Journal = {Journal of Chemical Theory and Computation},
+	Number = {3},
+	Pages = {1094--1101},
+	Publisher = {ACS Publications},
+	Title = {Conserve water: A method for the analysis of solvent in molecular dynamics},
+	Volume = {11},
+	Year = {2015}}
