@@ -3,28 +3,47 @@
 
 \section{Supplemental Information}
 
-\includegraphics[width=3.03704in,height=2.40229in]{media/image6.tiff}\includegraphics[width=3.07837in,height=2.38889in]{media/image7.tiff}
 
-\textbf{Figure S1.} Side-by-side comparison of MSMs constructed from
-protein Cα and Cβ pair distances (left), and solvent shell features
-(right), projected onto the first and second tICA components.
+\subsubsection{Methods}
+Atom indices for the $C_{\alpha}$'s and $C_{\beta}$'s of the following selected residues of p53 and MDM2, respectively: [Glu-17, Thr-18, Phe-19, Ser-20, Asp-21, Leu-22, Trp-23, Lys-24, Leu-25, Leu-26, Pro-27, Glu-28, Asn-29]; [Glu-25, Thr-26, Met-50, Lys-51, Leu-54, Leu-57, Gly-58, Ile-61, Met-62, Tyr-67, Gln-71, Gln-72, His-73, Val-75, Phe-91, Val-93, Lys-94, His-96, Ile-99].
 
-\includegraphics[width=6.5in,height=5.41806in]{media/image8.tiff}
 
-Figure S2. \textbf{Solvent shells around key residues contribute to the
-slowest motions.} (Top) The degree of contribution for each solvent
-shell. Significant slow-dynamical solvent features are labeled by carbon
-atom and residue to which it belongs. The green and blue slices denote
-groups of residues for p53 and MDM2, respectively.~ (Bottom) The flux of
-significant solvent dynamics relative to distinct solvent shells are
-represented by pink (solvation) and yellow dots (de-wetting).
 
-The second eigenvector revealed first shell (0-3 Å) of Methionine, M62
-(β), Q71 (β), Q72 (α), Phenylalanine, F91 (β) of MDM2 as well as
-Leucine, L25 (β), K24 (β) of p53 as the features contributing to the
-slowest motions.
+\subsubsection{Figures}
 
-Movies:
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.75]{Figures/SI/tica_compare.pdf}
+\caption{Side-by-side comparison of MSMs constructed from
+protein $C_{\alpha}$ and $C_{\beta}$ pair distances (left), and solvent shell features
+(right), projected onto the first and second tICA components.}
+\label{fig:tica_compare}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{Figures/SI/Solvent_Shell_Feature_Eigen_2}
+\caption{\textbf{Solvent shells around key residues contribute to the slowest motions.} (Top) The degree of contribution for each solvent shell. Significant slow-dynamical solvent features are labeled by carbon atom and residue to which it belongs. The green and blue slices denote groups of residues for p53 and MDM2, respectively. (Bottom)  The second eigenvector revealed first shell (0-3 Å) of Methionine, M62 ($\beta$), Q71 ($\beta$), Q72 ($\alpha$), Phenylalanine, F91 ($\beta$) of MDM2 as well as Leucine, L25 ($\beta$), K24 ($\beta$) of p53 as the features contributing to theslowest motions.}
+\label{fig:2nd_eigenvector}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{Figures/Implied_timescales/solvent_lag_50_clusters_600.png}
+\caption{Top ten implied timescales from the MSM built from solvent features.
+}
+\label{fig:implied_timescales}
+\end{figure}
+
+
+
+
+
+\subsubsection{Movies}
+
 
 RUN9\_CLONE70: (531 ns)
 
@@ -41,7 +60,7 @@ high volume of water inside the pocket.
 Here, we can see that movement along tIC1 correlates to the distance
 from the pocket i.e., displacement of water inside the pocket. The helix
 begins to coil at S20 of p53 at 193 ns (00:06) pulling F19 (light green)
-closer to the pocket, simultaneously increaing tIC1 on the tICA
+closer to the pocket, simultaneously increasing tIC1 on the tICA
 landscape. The maximum tIC1 value correlates to the instant (232 ns) W23
 and F19 both enter the pocket.
 
@@ -52,7 +71,7 @@ particular trajectory is very interesting, in that, when W23 enters the
 pocket, it's unable to lock into place due to its crooked positioning
 (00:15).
 
-Eventually, large survace cavities begin to form, and W23 gets jostled
+Eventually, large surface cavities begin to form, and W23 gets jostled
 out and performs a 360° turn at 41.1 ns (00:16). The helix stabilizes
 when W23 and F19 are comfortable in the pocket.
 
@@ -63,3 +82,8 @@ when W23 and F19 are comfortable in the pocket.
 This short trajectory
 
 \#RUN24\_CLONE68: (321 ns)
+
+
+
+
+

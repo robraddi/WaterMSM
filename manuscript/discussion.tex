@@ -1,3 +1,4 @@
+
 % !TEX root = ./main.tex
 
 \section{Discussion}
@@ -6,51 +7,14 @@
 
 %\textbf{{[} Talk about any filled gaps, and how this is relevant to the field. {]} }
 
-%\textbf{If TRP is so important to these trajectories, why don't we see it in the solvent shell analysis as more prominent?}
+The WetMSM Solvent Shells Featurization enables instantaneous solvent density over all the trajectories.  This featurizer permits the analysis of MD trajectories from an entirely different viewpoint. We were able to uncover the slowest motions of the system involved in de-wetting and show the effects of water in protein dynamics reaffirming the hydrophobic effect.  Many follow the notion that hydrophobic interactions have the greatest influence of conformational change protein binding, and it is common practice to remove water after simulations to reduce the computational cost of analysis.
+Possibly as a future project would be to find the system dependency of various featurizers.
+Solvent Shells Featurization could be extremely useful for analyzing water and ions inside a membrane system, sugars involved in hydrogen bonding, or looking at the effects of trapped water bundles in various cavities, which is pertinent to drug design.  It is possible to  uncover substantial detail when turning to this solvent centric point of view.
 
-TRP is found in the conformational analysis, as for the solvent
-analysis, we know it is important, but there are residues that correlate
-to solvent dynamics with greater magnitude than TRP.
+\textbf{Did you use any other metric besides strictly protein-protein degrees of freedom or strictly a solvent shell features?} \textbf{Is there a need to use a protein-solvent feature union metric?} Information of both metrics are very similar. It would be unnecessary to perform a computation with a union of protein-solvent features as the comparison of solvent only and protein only features reveal almost identical tICA landscapes. Building Markov state models for both the protein and solvent MSMs with the same parameters show that the differences between the two are strictly in the slowest motions, where the landscape from the solvent model that tIC1 correlates to the slowest de-wetting motions. Contrary to the solvent model, the protein model uncovers the slowest protein motions where Trp of p53 is very important.
 
-\textbf{Did you use any other metric besides strictly protein-protein
-degrees of freedom or strictly a solvent shell features?}
 
-\textbf{Is there a need to use a protein-solvent feature union metric?}
-
-Information of both metrics are very similar. It is unnecessary to
-perform a computation with a union of protein-solvent features as the
-comparison of solvent only and protein only features reveal almost
-identical tICA landscapes. Building markov state models for both the
-protein and solvent MSMs with the same parameters show that the
-differences between the two are strictly in the slowest motions, where
-the landscape from the solvent model that tIC1 correlates to the slowest
-de-wetting motions. Contrary to the solvent model, the protein model
-uncovers the slowest protein motions where Trp of p53 is very important.
-
-\textbf{How does this method fair?}
-
-Building a WetMSM from Solvent Shells Featurization enables
-instantaneous solvent density throughout all data. It is a powerful tool
-that uncovers the slowest motions of the system involved in de-wetting.
-Although it is a powerful tool, the computational cost of considering
-water molecules is much larger than that of the use of strictly protein
-indices. Many follow the notion of hydrophobic interactions being the
-major influence of conformational change protein binding. Normally,
-water is removed after simulations to reduce the computational cost of
-analysis. From this analysis, water does indeed effect protein dynamics,
-but after revealing that the tICA landscapes are in fact so similar, it
-would be advantageous when analyzing protein movement to revert back to
-a metric like protein-protein pair distances. Furthermore, if one were
-to attempt to analyze solvent or ions within a system, one could uncover
-substantial detail when turning to this solvent centric point of view.
-However, studying water molecules around the binding site or
-protein-protein interface requires attention to detail, the overall
-influence shouldn't be snubbed.
-
-Creating water MSMs is nice and you get a lot of information because its
-heavily detailed. Information regarding flux of water is pertinent to
-drug design, for example, requires the fastidious analysis of water and
-ions within certain regions.
+If tryptophan of p53 is so important to these trajectories, why don't we see it in the solvent shell analysis as more prominent?  From the protein-centric model, W23 is found to have great importance.  Using solvent features, the residues that are deemed significant by tICA are those that have the slowest solvent dynamics.  In the analysis shown above, W23 was indeed important and can be seen in Figure \ref{fig:water_counts} as it facilitates water fluctuations in other residues.
 
 
 

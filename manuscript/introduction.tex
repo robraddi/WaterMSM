@@ -19,7 +19,7 @@ well-structured helix.
 
 In all of the previously published work on the MDM2-p53 system, there
 has been surprisingly subtle insight on the role water plays. It has
-been suggested from Marie-Claire et al (2) and many others (3, 4) that
+been suggested from Marie-Claire et al \cite{bellissent2016water} and many others \cite{spyrakis2017roles,yang2013approaches} that
 solvent and protein motions may be interconnected, and the dynamics of
 the protein is ``slaved'' to the solvation layers. It could be argued
 that protein function, conformational dynamics and stability are all a
@@ -32,7 +32,7 @@ Normally, molecular simulation studies investigate protein
 conformational features, where hydrophobic interactions dictate the
 slowest motions. To what extent would it possible to examine protein
 binding dynamics using only solvent degrees of freedom? In this work,
-the goal is to determine what role water plays in the protein binding
+our goal is to determine what role water plays in the protein binding
 mechanism, particularly in the binding pocket of MDM2 when p53 binds.
 
 To uncover the specificities of water-protein interactions, here we
@@ -40,23 +40,23 @@ explore methods to transform the positions of solvent molecules in
 molecular simulations to quantifiable features that can be used to build
 Markov State Models (MSMs) of conformational dynamics. A Markov State
 Model is a network of conformational states and transition rates
-connecting them. (5),(6) In practice, an MSM is constructed by
+connecting them \cite{schwantes2014perspective,bowman2013introduction}. In practice, an MSM is constructed by
 estimating a transition probability matrix from the trajectory data,
 which determines the likelihood of transitioning from one state to
 another in some small time interval.
 
 A crucial step in constructing an MSM is discovering the relevant
 metastable states, which for large trajectory datasets requires
-conformational clustering, typically done using a dimensionality
+conformational clustering, typically done concurrent with a dimensionality
 reduction method such as time-independent component analysis (tICA).
 tICA is a statistical model that performs a dimensionality reduction by
 eigendecomposition of the time-lagged correlation matrix,
 \emph{C}\textsuperscript{∆\emph{t}}, which finds the coordinate vectors
-along which conformational motions decorrelate most slowly. (6)
+along which conformational motions decorrelate most slowly. \cite{bowman2013introduction}
 
 Below, we describe the process of building an MSM of the p53-MDM2
 binding reaction using only solvent coordinates, from a previously
-published trajectory dataset (1) of more than 900 µs of aggregate
+published trajectory dataset \cite{zhou2017bridging} of more than 900 µs of aggregate
 simulation time in explicit solvent. Thus, our work offers an
 unprecedented opportunity to examine the role of solvent in
 protein-protein binding.
