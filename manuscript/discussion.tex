@@ -9,17 +9,25 @@
 
 
 The WetMSM Solvent Shells Featurization enables instantaneous solvent density over all the trajectories.  This featurizer permits the analysis of MD trajectories from an entirely different viewpoint. We were able to uncover the slowest motions of the system involved in de-wetting and show the effects of water in protein dynamics reaffirming the hydrophobic effect.  Many follow the notion that hydrophobic interactions have the greatest influence of conformational change protein binding, and it is common practice to remove water after simulations to reduce the computational cost of analysis.
-Possibly as a future project would be to find the system dependency of various featurizers.
-Solvent Shells Featurization could be extremely useful for analyzing water and ions inside a membrane system, sugars involved in hydrogen bonding, or looking at the effects of trapped water bundles in various cavities, which is pertinent to drug design.  It is possible to  uncover substantial detail when turning to this solvent centric point of view.
+
+Solvent Shells Featurization has the potential to be extremely useful for analyzing water and ions inside a membrane system, sugars involved in hydrogen bonding, or looking at the effects of trapped water bundles in various cavities, which is pertinent to drug design.  It is possible to  uncover substantial detail when turning to this solvent centric point of view.
+
+Deciding what the best features are can be a daunting task, but an important one. A recently developed method by George A. et al. \cite{george2020laplacian} automates the feature selection problem by using the generalized matrix Rayleigh quotient (GMRQ) to objectively decide the optimal featurization for the system. This promising approach will be explored in future works.
+
 
 \textbf{Did you use any other metric besides strictly protein-protein degrees of freedom or strictly a solvent shell features?} \textbf{Is there a need to use a protein-solvent feature union metric?} Information of both metrics are very similar. It would be unnecessary to perform a computation with a union of protein-solvent features as the comparison of solvent only and protein only features reveal almost identical tICA landscapes. Building Markov state models for both the protein and solvent MSMs with the same parameters show that the differences between the two are strictly in the slowest motions, where the landscape from the solvent model that tIC1 correlates to the slowest de-wetting motions. Contrary to the solvent model, the protein model uncovers the slowest protein motions where Trp of p53 is very important.
 
-If tryptophan of p53 is so important to these trajectories, why don't we see it in the solvent shell analysis as being more prominent?  From the protein-centric model, W23 is found to have great importance.  When using solvent features, the features deemed significant by tICA are those that have the rare solvent transitions.  In the analysis shown above, W23 was indeed important and can be seen in Figure \ref{fig:water_counts} as it facilitates water fluctuations that effect other residues.
+\textbf{If tryptophan of p53 is so important to these trajectories, why don't we see it in the solvent shell analysis as being more prominent?}  From the protein-centric model, W23 is found to have great importance.  It is interesting to see that tryptophan is not given the regarded with the same level of importance  when using solvent features. We know that the features deemed significant by tICA are those that have the rare solvent transitions.  In the analysis shown above, W23 was indeed important and can be seen in Figure \ref{fig:water_counts} as it facilitates water fluctuations that effect other residues such as threonine and phenylanine of p53 which have been found to play a very important role in the anchoring and stability during the binding process \cite{zwier2016efficient}.
+
 
 
 
 % collective variables that combine solvent shell features that indicate the rare transitions
 %slow directions and rare transitions in the set of basis functions
+
+
+
+
 
 
 

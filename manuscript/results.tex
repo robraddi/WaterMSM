@@ -4,21 +4,9 @@
 
 \textbf{Complementary Transitions Implies Hydrophobic Effect}
 
-How do MSMs from solvent coordinates match up with the protein centric
-view? Solvent and protein transitions are found to be interconnected,
-such that when mapping each set of input features to the first two
-slowest-relaxing tICA components there exists overwhelming similarities.
-Potential energy wells overlap for the two largest tICA
-components, tIC1 and tIC2. Furthermore, the metastable states that correspond
-to these basins are identical for both tICA landscapes. Many have
-proposed various roles for water molecules, such as water enslaving
-protein motions \cite{bellissent2016water}. Here, in fine detail the latter proposal was
-scrutinized by exposing the solvent shells that contributed to the
-slowest motions in the de-wetting process and emphasizing the
-consequence of solvent density within the binding site.
+How do MSMs from solvent coordinates match up with the protein centric view? Solvent and protein transitions are found to be interconnected, such that when mapping each set of input features to the first two slowest-relaxing tICA components there exists overwhelming similarities. Potential energy wells overlap for the two largest tICA components, tIC1 and tIC2. Furthermore, the metastable states that correspond to these basins are identical for both tICA landscapes. Many have proposed various roles for water molecules, such as water enslaving protein motions \cite{bellissent2016water}. Here, in fine detail the latter proposal was scrutinized by exposing the solvent shells that contributed to the slowest motions in the de-wetting process and emphasizing theconsequence of solvent density within the binding site.
 
-Previously, the protein centric viewpoint of binding has been
-revealed. In this work, we reconstructed the protein centric MSM and built an MSM using solvent features to investigate the role of water. The same model parameters were used to objectively compare our models. A side-by-side comparison of the two tICA landscapes can be found in Figure \ref{fig:tica_compare} and implied timescales in Figure \ref{fig:implied_timescales}. The first model was built from protein pair-distances and the other using a solvent shell features metric. Remarkably, by randomly extracting clusters from the tICA subspace (Figure \ref{fig:tica_compare}) at each quadrant, we revealed that the four main metastable states coincide with findings from Zhou et al. and are as follows: top left represents the unbound-unfolded, bound-unfolded in the top right, bound-folded in the bottom right, bottom left is the bound-unfolded.
+Previously, the protein centric viewpoint of binding has been revealed. In this work, we reconstructed the protein centric MSM and built an MSM using solvent features to investigate the role of water. The same model parameters were used to objectively compare our models. A side-by-side comparison of the two tICA landscapes can be found in Figure \ref{fig:tica_compare} and implied timescales in Figure \ref{fig:implied_timescales}. The first model was built from protein pair-distances and the other using a solvent shell features metric. Remarkably, by randomly extracting clusters from the tICA subspace (Figure \ref{fig:tica_compare}) at each quadrant, we revealed that the four main metastable states coincide with findings from Zhou et al. and are as follows: top left represents the unbound-unfolded, bound-unfolded in the top right, bound-folded in the bottom right, bottom left is the bound-unfolded.
 
 The similarities do not end here. The correlation with Tryptophan, W23 of p53, and tIC2
 still exists in the solvent MSM. It has been found that trajectories that start at (+tIC1, +tIC2), and finish at the native state (+tIC1, -tIC2) predominantly display W23 facing out of the page when looking at MDM2-p53 from the orientation shown in all the figures from this work. Likewise, trajectories starting at (-tIC1, -tIC2) show W23 oriented into the page.  An observed trend impossible to detect from the protein centric model shows that post binding of MDM2-p53, bundles of water is commonly found to associate—requiring an increase of water fluctuation to induce burrowing of W23.
@@ -35,11 +23,11 @@ respect to solvent features over all trajectories \cite{harrigan2015conserve}. S
 The feature vector yields information over all trajectories and was transformed by tICA to produce a linear combination of water features. After construction of the 10-component tICA model, which serves as the new basis set for the data, we subsequently built a
 solvent MSM following equivalent parameters as Zhou et al.
 
-Information regarding individual solvent features that correlate to the
-slowest-dynamical motions of de-wetting were extracted from the 1\textsuperscript{st} eigenvector. From this, mechanism is determined.  The important solvent features are represented as a color map shown in the bottom panel of Figure \ref{fig:1st_eigenvector}, moving from negative (pink) to positive (yellow).  The color represents the degree of contribution to the slowest dynamical solvent motions within a specific shell. The coefficients used to represent this magnitude comes from the normalized 1\textsuperscript{st} eigenvector to elude from noise (top panal of Figure \ref{fig:1st_eigenvector}).
+Information regarding individual solvent features that correlate to the slowest-dynamical motions of de-wetting were extracted from the 1\textsuperscript{st} eigenvector. From this, mechanism is determined.  The important solvent features are represented as a color map shown in the bottom panel of Figure \ref{fig:1st_eigenvector}, moving from negative (pink) to positive (yellow).  The color represents the degree of contribution to the slowest dynamical solvent motions within a specific shell. The coefficients used to represent this magnitude comes from the normalized 1\textsuperscript{st} eigenvector to elude from noise (top panal of Figure \ref{fig:1st_eigenvector}).
 
 
 The residues with the greatest contributions to the slow motions of de-wetting are shown in Figure \ref{fig:atom_indices} and have been colored accordingly for a convenient reference.  The slow-dynamical solvent features included the first shell (0-3 Å) of Histidine, H73 ($\alpha$) and Glutamine, Q72 ($\alpha$, $\beta$) of MDM2 along with the second shell (3-6 Å) of K24($\alpha$, $\beta$) and T18($\alpha$, $\beta$) of p53.
+
 
 
 
@@ -54,8 +42,7 @@ The residues with the greatest contributions to the slow motions of de-wetting a
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.5]{Figures/SolvShellFeatures/Solvent_Shell_Feature_Eigen_1.pdf}
-\caption{\textbf{Solvent shells around key residues contribute
-  to the slowest de-wetting motions.} (Top) The degree of contribution for each solvent shell. Significant slow-dynamical solvent features are labeled for important solute atoms ($C_{\alpha}$ and $C_{\beta}$). The first 26 features are of the first shell of p53 (green), then the next 38 are of the first shell of MDM2 (blue). Next, second shell of p53, and so on. (Bottom) Transformed eigenvector to show individual shell contribution. The color map represents the slow solvent dynamics of the system as it relaxes towards equilibrium (pink to yellow).}
+\caption{\textbf{Solvent shells around key residues contribute to the slowest de-wetting motions.} (Top) The degree of contribution for each solvent shell. Significant slow-dynamical solvent features are labeled for important solute atoms ($C_{\alpha}$ and $C_{\beta}$). The first 26 features are of the first shell of p53 (green), then the next 38 are of the first shell of MDM2 (blue). Next, second shell of p53, and so on. (Bottom) Transformed eigenvector to show individual shell contribution. The color map represents the slow solvent dynamics of the system as it relaxes towards equilibrium (pink to yellow).}
 \label{fig:1st_eigenvector}
 \end{figure}
 
@@ -97,7 +84,15 @@ observables discernibly follow the movements associated with transitions
 
 %Instantaneous solvent density from specific movies (SI) suggests the hydrophobic effect plays a keyrole in water dynamics.
 
-It is known that the hydrogen bond acceptor from the oxygen atom in water molecules is in fact a primary mechanism of protein stability. As an example of this, threonine T18 of p53 creates hydrogen bonds with water especially when T18 is in close proximity to Q72 of MDM2, where the jostling of water clusters back-and-forth between these two residues increases the formation of hydrogen bonds.  Water could act as an intermediate state stabilizer if found where hydrogen bonds are formed with the hydroxyl group of polar residues like T18 and Lysine, K24 to facilitate the structural transformation of the p53 alpha helix. Water bundles are found during important motions of helix formation and can be found looking for surface cavities. Scattering of water leads to reorganization to increase polar interactions and position themselves to a more favorable location.
+Interestingly, a recent study \cite{yadahalli2019kinetic} also notes the importance of theronine in the binding of p53 to MDM2 and suggests a ten-to twenty-fold decrease in binding affinity when Thr18 is phosporylated in comparison to the wild-type p53.  It is known that the hydrogen bond acceptor from the oxygen atom in water molecules is in fact a primary mechanism of protein stability. As an example of this, threonine T18 of p53 creates hydrogen bonds with water especially when T18 is in close proximity to Q72 of MDM2, where the jostling of water clusters back-and-forth between these two residues increases the formation of hydrogen bonds.  Water could act as an intermediate state stabilizer if found where hydrogen bonds are formed with the hydroxyl group of polar residues like T18 and Lysine, K24 to facilitate the structural transformation of the p53 $\alpha$-helix. Water bundles are found during important motions of helix formation and can be found looking for surface cavities. Scattering of water leads to reorganization to increase polar interactions and position themselves to a more favorable location.
+
+
+
+
+
+
+
+
 
 
 
