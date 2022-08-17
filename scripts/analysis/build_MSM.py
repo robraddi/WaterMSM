@@ -23,33 +23,6 @@ matplotlib.use('Agg')
 fontfamily={'family':'sans-serif','sans-serif':['Arial']}
 from matplotlib import pyplot as plt
 plt.rc('font', **fontfamily)
-
-# Libraries:{{{
-import glob, os, sys, subprocess, commands
-import matplotlib
-import mdtraj as md
-import msmbuilder.utils
-import numpy as np
-from msmbuilder import *
-from itertools import combinations
-matplotlib.use('Agg')
-from matplotlib import pyplot as plt
-from msmbuilder.cluster import KCenters, KMedoids
-from msmbuilder.decomposition import tICA
-from msmbuilder.featurizer import AtomPairsFeaturizer
-from msmbuilder.msm import ContinuousTimeMSM, implied_timescales, MarkovStateModel
-from sklearn.externals import joblib
-from sklearn.pipeline import Pipeline
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-import matplotlib
-from matplotlib.colors import LogNorm
-matplotlib.use('Agg')
-fontfamily={'family':'sans-serif','sans-serif':['Arial']}
-from matplotlib import pyplot as plt
-plt.rc('font', **fontfamily)
-
-# }}}
-
 # }}}
 
 
